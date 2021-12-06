@@ -1,0 +1,10 @@
+insert into role values ('7eea4fb3-8fb0-4145-a20a-fbbbdcc2cf86', 'USER');
+insert into account values('c61dc1c5-0d8b-4de1-9f81-8ebe257b3fde', 'Peter Parker', 'pparker', 'pparker@test.test', '7eea4fb3-8fb0-4145-a20a-fbbbdcc2cf86', '2021-11-17 04:30:43', '2021-11-17 04:30:43');
+insert into account values('35102ce0-db4b-4b75-ac6d-1670955f8896', 'Tony Stark', 'tstark', 'tstark@test.test', '7eea4fb3-8fb0-4145-a20a-fbbbdcc2cf86', '2021-11-17 04:30:43', '2021-11-17 04:30:43');
+insert into category values('dc6bd312-2714-4883-baba-13bc77e64e47', 'Laptop');
+insert into category values('bba1c801-7260-4beb-b98f-33e6d8f08091', 'Mouse');
+insert into asset_definition values('5e6abe9b-693b-4f4e-8b7c-e0a3ff34ab60', 'Lenovo Thinkpad T490', 'Lenovo', 'dc6bd312-2714-4883-baba-13bc77e64e47');
+insert into asset_definition values('d03115bd-f470-4979-9275-c65ac627db99', 'Logitech', 'Logitech', 'bba1c801-7260-4beb-b98f-33e6d8f08091');
+insert into asset values('bf440c17-dd73-47e0-9e3a-0bd50152fe42', 'XXX-333-YZW', 'FREE', null, '5e6abe9b-693b-4f4e-8b7c-e0a3ff34ab60', '2021-11-17 04:30:43', '2021-11-17 04:30:43', null);
+insert into asset values('c24b57b0-52e0-43ad-afcf-79a9cd7c06b5', 'AAA-BBB-GGG', 'ASSIGNED', "35102ce0-db4b-4b75-ac6d-1670955f8896", '5e6abe9b-693b-4f4e-8b7c-e0a3ff34ab60', '2021-11-23 04:30:43', '2021-11-23 04:30:43', '2021-11-23 04:30:43');
+insert into asset values('eb143206-15e2-4ad3-8416-7f6404b9a903', 'ZZZ-YYY-111', 'ASSIGNED', "35102ce0-db4b-4b75-ac6d-1670955f8896", 'd03115bd-f470-4979-9275-c65ac627db99', '2021-11-23 04:30:43', '2021-11-23 04:30:43', '2021-11-23 04:30:43');

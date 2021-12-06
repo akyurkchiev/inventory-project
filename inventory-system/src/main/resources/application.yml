@@ -1,0 +1,18 @@
+spring:
+  jpa:
+   hibernate:
+    ddl-auto: none
+  datasource:
+   url: jdbc:mysql://localhost:3306/inventory
+   username: root
+   password: pass1
+   initialization-mode: always
+   data: classpath:data.sql
+
+
+## JWT Properties
+jwt:
+  secret: s3cr3t
+
+server:
+  port: 8081
