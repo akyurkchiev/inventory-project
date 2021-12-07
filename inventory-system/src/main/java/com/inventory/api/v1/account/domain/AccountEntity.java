@@ -41,7 +41,7 @@ public class AccountEntity {
     private RoleEntity role;
 
     @OneToMany(mappedBy = "account")
-    private List<AssetEntity> items;
+    private List<AssetEntity> assets;
 
     @CreatedDate
     @Column(name = "created_at", nullable = false, updatable = false)

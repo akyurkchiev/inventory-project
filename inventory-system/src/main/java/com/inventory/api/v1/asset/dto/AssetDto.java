@@ -4,14 +4,14 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-@Builder
+import java.util.List;
+
 @Getter
 @Setter
+@Builder
 public class AssetDto {
     private final String model;
-    private final String serialNumber;
-    private final String manufacturer;
-    private final String category;
-    private final AssetStatus status;
-    private final String assignedDate;
+    private final int total;
+    private final int unassigned;
+    private final List<AssetDetails> details;
 }

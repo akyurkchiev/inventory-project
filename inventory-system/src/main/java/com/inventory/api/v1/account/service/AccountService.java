@@ -1,10 +1,11 @@
 package com.inventory.api.v1.account.service;
 
 import com.inventory.api.v1.account.domain.AccountEntity;
+import com.inventory.api.v1.account.dto.AccountAssetsDto;
 import com.inventory.api.v1.account.dto.AccountResponse;
 import com.inventory.api.v1.account.repository.AccountRepository;
 import com.inventory.api.v1.asset.domain.AssetEntity;
-import com.inventory.api.v1.asset.dto.AssetDto;
+import com.inventory.api.v1.asset.dto.InventoryDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -30,17 +31,15 @@ public class AccountService {
         response.setUsername(account.getUsername());
         response.setName(account.getFullName());
         response.setEmail(account.getEmail());
-        response.setItems(account.getItems().stream().map(this::populateItem).collect(Collectors.toList()));
+        response.setAssets(account.getAssets().stream().map(this::populateItem).collect(Collectors.toList()));
         return response;
     }
 
-    private AssetDto populateItem(AssetEntity item){
-        return AssetDto.builder()
+    private AccountAssetsDto populateItem(AssetEntity item){
+        return AccountAssetsDto.builder()
+                .category(item.getAssetDefinition().getCategory().getName())
                 .serialNumber(item.getSerialNumber())
                 .model(item.getAssetDefinition().getModel())
-                .manufacturer(item.getAssetDefinition().getManufacturer())
-                .category(item.getAssetDefinition().getCategory().getName())
-                .status(item.getStatus())
                 .assignedDate(dateFormatter(item.getModifiedAt()))
                 .build();
     }

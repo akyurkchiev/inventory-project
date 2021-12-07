@@ -10,7 +10,7 @@ import java.util.List;
 @Setter
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class AssetResponse {
-    private List<AssetDto> assets;
+    private List<InventoryDto> assets;
 
 
 }

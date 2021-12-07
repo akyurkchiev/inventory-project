@@ -26,5 +26,5 @@ public class CategoryEntity {
     private String name;
 
     @OneToMany(mappedBy = "category")
-    private List<AssetDefinitionEntity> itemDefinitions;
+    private List<AssetDefinitionEntity> assetDefinitions;
 }
