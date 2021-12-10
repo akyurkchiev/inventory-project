@@ -5,10 +5,11 @@ import { take } from 'rxjs/operators';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'inventory-system-frontend';
+
   content = '';
 
   constructor(private http: HttpClient) {}
