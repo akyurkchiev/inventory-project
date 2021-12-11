@@ -1,15 +1,9 @@
 <div class="content">
   <h2>Example</h2>
   <div class="card-container">
-    <button class="card card-small" (click)="getResource('assets')" tabindex="0">
-      <span>Get Assets</span>
-    </button>
-    <button class="card card-small" (click)="getResource('accounts')" tabindex="0">
-      <span>Get Accounts</span>
-    </button>
-    <button class="card card-small" (click)="content = ''" tabindex="0">
-      <span>CLEAR</span>
-    </button>
+    <p-button label="Get Assets" (click)="getResource('assets')"></p-button>
+    <p-button label="Get Accounts" (click)="getResource('accounts')"></p-button>
+    <button pButton pRipple type="button" label="CLEAR" class="p-button-outlined" (click)="content = ''"></button>
   </div>
   <p>{{ content }}</p>
 </div>
